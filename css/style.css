@@ -1,0 +1,291 @@
+/*IMPORT DE LA GOOGLE FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Kanit:wght@400;500;700&display=swap');
+
+/*VARIABLES DE COULEURS ET DES TAILLES DE POLICE*/
+:root{
+    --darker: #002233;
+    --red: #a4241b;
+    --white: #ffffff;
+    --black: #111;
+
+    --title: 6vh;
+    --text: 2.5vh;
+    --litleText: 1.3vh;
+}
+   
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+}
+
+/* STYLE DU BODY */
+
+body {
+    background-image: url(../img/home/home_background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0vh 10vh 0vh 10vh;
+    overflow-y: auto;
+}
+
+/* STYLE DU HEADER */
+
+header {
+    min-height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4vh;
+    font-size: var(--litleText);
+}
+
+header img {
+    width: 10%;
+}
+
+nav {
+    width: 30%;
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 1vh;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    padding: 1vh 3vh 1vh 3vh;
+    border: 1px solid var(--white);
+    border-radius: .8vh;
+    transition: .8s;
+}
+nav a:hover{
+    color: var(--darker);
+    border: 1px solid var(--red);
+    background-color: var(--red);
+    transition: .8s;
+}
+
+nav a:nth-child(4) {
+    background-color: var(--red);
+    border-color: var(--red);
+}
+nav a:nth-child(4):hover {
+    background-color: var(--darker);
+    border: 1px solid var(--red);
+    color: var(--white);
+    transition: .8s;
+}
+
+/* STYLE DU CORPS DE PAGE */
+
+section {
+    display: flex;
+    width: 40%;
+    min-height: 65vh;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main img {
+    width: 75%;
+  
+}
+
+h1 {
+    color: var(--darker);
+    font-size: var(--title);
+    margin-bottom: 5vh;
+}
+
+p {
+    color: var(--darker);
+    font-size: var(--text);
+    margin-bottom: 3vh;
+}
+
+span {
+    color: var(--red);
+}
+
+main div a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 700;
+    font-size: var(--text);
+    padding: 1vh 3vh 1vh 3vh;
+    border: 1px solid var(--red);
+    border-radius: .8vh;
+    background-color: var(--red);
+    transition: .8s;
+}
+
+main div a:hover{
+    background-color: var(--darker);
+    border: 1px solid var(--darker);
+    transition: .8s;
+}
+
+/* STYLE DU FOOTER */
+
+footer {
+    min-height: 0.5vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer p {
+    font-size: var(--litleText);
+    color: var(--red);
+    margin-right: 1vh;
+}
+footer a {
+    text-decoration: none;
+    font-size: var(--litleText);    
+    color: var(--red);
+    margin: 0vh 1vh 1vh 0vh;
+}   
+
+
+/* ANIMATIONS CSS DE LA PAGE */
+
+header {
+    animation: fadeintop 2s;
+}
+nav a:nth-child(3) {
+    animation: fadeintop 1s;
+}
+nav a:nth-child(2) {
+    animation: fadeintop 1.5s;
+}
+nav a:nth-child(1) {
+    animation: fadeintop 2s;
+}
+section {
+    animation: fadeinleft 2s;
+}
+section h1 {
+    animation: fadeinleft 1s;
+}
+section p {
+    animation: fadeinleft 1.5s;
+}
+main img{
+    animation: fadeinright 2s;
+}
+footer {
+    animation: fadeinbottom 2s;
+}
+@keyframes fadeinleft {
+    from {
+        transform: translateX(-4.5vw);
+    }
+    to {
+        transform: translateX(0vw);
+    }
+}
+@keyframes fadeinright {
+    from {
+        transform: translateX(4.5vw);
+    }
+    to {
+        transform: translateX(0vw);
+    }
+}
+@keyframes fadeintop {
+    from {
+        transform: translateY(-4.5vw);
+    }
+    to {
+        transform: translateY(0vw);
+    }
+}
+@keyframes fadeinbottom {
+    from {
+        transform: translateY(4.5vw);
+    }
+    to {
+        transform: translateY(0vw);
+    }
+}
+
+
+
+/* MEDIA QUERIES POUR LES TABLETTES EN MODE PORTRAIT (entre 600px et 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    body {
+        margin: 5vh;
+        background-color: var(--darker);
+        background-image: none;
+    }
+
+    header {
+        min-height: 10vh;
+        margin-bottom: 2vh;
+        font-size: var(--text);
+    }
+
+    nav {
+        width: 50%;
+        min-height: 10vh;
+        margin-right: 1vh;
+    }
+
+    nav a {
+        padding: 0.8vh 2vh;
+        font-size: var(--litleText);
+    }
+
+    section {
+        width: 60%;
+        min-height: 45vh;
+    }
+
+    main img {
+        width: 70%;
+    }
+
+    h1 {
+        font-size: var(--text);
+        margin-bottom: 3vh;
+        color: var(--white);
+    }
+
+    p {
+        font-size: var(--litleText);
+        margin-bottom: 2vh;
+        color: var(--white);
+    }
+
+    main div a {
+        font-size: var(--litleText);
+        padding: 0.8vh 2vh;
+    }
+
+    footer {
+        min-height: 1vh;
+        margin-top: 10vh;
+    }
+
+    footer p {
+        font-size: var(--litleText);
+        margin: 0.5vh 1vh;
+    }
+    footer a {
+        font-size: var(--litleText);
+        margin: 0.5vh 1vh;
+    }
+}

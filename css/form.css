@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Kanit:wght@400;500;700&display=swap');
+
+/*VARIABLES DE COULEURS ET DES TAILLES DE POLICE*/
+:root{
+    --darker: #002233;
+    --red: #a4241b;
+    --white: #ffffff;
+    --black: #111;
+
+    --title: 6vh;
+    --text: 2.5vh;
+    --litleText: 1.3vh;
+}
+   
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+}
+
+/* STYLE DU BODY */
+
+body {
+    background-color: var(--darker);
+    margin: 0vh 10vh 0vh 10vh;
+    overflow-y: auto;
+}
+
+/* STYLE DU HEADER */
+
+header {
+    min-height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4vh;
+    font-size: var(--litleText);
+}
+
+header img {
+    width: 10%;
+}
+
+nav {
+    width: 30%;
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 1vh;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    padding: 1vh 3vh 1vh 3vh;
+    border: 1px solid var(--white);
+    border-radius: .8vh;
+    transition: .8s;
+}
+nav a:hover{
+    color: var(--darker);
+    border: 1px solid var(--red);
+    background-color: var(--red);
+    transition: .8s;
+}
+
+nav a:nth-child(4) {
+    background-color: var(--red);
+    border-color: var(--red);
+}
+nav a:nth-child(4):hover {
+    background-color: var(--darker);
+    border: 1px solid var(--red);
+    color: var(--white);
+    transition: .8s;
+}
+
+/* STYLE DU FORM  */
+
+main form {
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    width: 100%;
+    color: var(--white);
+}
+
+main form > div {
+    margin: 30px 20px;
+}
+
+main label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+main input {
+    height: 20px;
+    width: 40%;
+    border-radius: 5px;
+}
+
+main button {
+    margin-left: 20px;
+    margin-bottom: 30px;
+    padding: 10px 32px;
+    cursor: pointer;
+    background-color: var(--darker);
+    border: 2px solid var(--white);
+    color: var(--white);
+    border-radius: 5px;
+}
+
+main .message-error {
+    border: 1px solid rgba(212, 42, 0, 1);
+    color: rgb(212, 42, 0);
+    background: rgba(212, 42, 0, 0.4);
+    padding: 16px 32px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+main .message-success {
+    border: 1px solid rgb(81, 150, 2);
+    color: rgb(81, 150, 2);
+    background-color: rgba(113, 212, 0, 0.4);
+    padding: 16px 32px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+main input.success {
+    background-color: rgba(0, 128, 0, 0.34);
+}
+
+main input.error {
+    background-color: rgba(255, 0, 0, 0.35);
+}
+
+main .message-error.visible, .message-success.visible {
+    display: block;
+}
+
+
+/* STYLE DU FOOTER */
+
+footer {
+    min-height: 0.5vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer p {
+    font-size: var(--litleText);
+    color: var(--red);
+    margin-right: 1vh;
+}
+footer a {
+    text-decoration: none;
+    font-size: var(--litleText);    
+    color: var(--red);
+    margin: 0vh 1vh 1vh 0vh;
+}   
